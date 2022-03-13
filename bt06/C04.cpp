@@ -5,6 +5,9 @@
 Write your code in this editor and press "Run" button to compile and execute it.
 
 *******************************************************************************/
+#include<iostream>
+#include<cmath>
+using namespace std;
 
 char hadamardMatrix[50][50];
 void drawMatrix(int N,int xStart,int yStart);
@@ -31,7 +34,7 @@ void drawRevMatrix(int N,int xStart,int yStart){
     drawRevMatrix(n,xStart,n+yStart);
     drawMatrix(n,n+xStart,n+yStart);
 }
-void solveDrawMatrix(){
+int main(){
     int n;cin>>n;
     drawMatrix(pow(2,n),0,0);
     for(int i=0;i<pow(2,n);i++){
