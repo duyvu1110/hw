@@ -9,37 +9,37 @@ Write your code in this editor and press "Run" button to compile and execute it.
 #include<cmath>
 using namespace std;
 
-char hadamardMatrix[50][50];
-void drawMatrix(int N,int xStart,int yStart);
-void drawRevMatrix(int N,int xStart,int yStart);
-void drawMatrix(int N,int xStart,int yStart){
+char screen[50][50];
+void H(int N,int xStart,int yStart);
+void h_reverse(int N,int xStart,int yStart);
+void H(int N,int xStart,int yStart){
     if(N==0){
-        hadamardMatrix[xStart][yStart]='o';
+        screen[xStart][yStart]='o';
         return;
     }
     int n=N/2;
-    drawMatrix(n,xStart,yStart);
-    drawMatrix(n,n+xStart,yStart);
-    drawMatrix(n,xStart,n+yStart);
-    drawRevMatrix(n,n+xStart,n+yStart);
+    H(n,xStart,yStart);
+    H(n,n+xStart,yStart);
+    H(n,xStart,n+yStart);
+    h_reverse(n,n+xStart,n+yStart);
 }
-void drawRevMatrix(int N,int xStart,int yStart){
+void h_reverse(int N,int xStart,int yStart){
     if(N==0){
-        hadamardMatrix[xStart][yStart]='.';
+        screen[xStart][yStart]='.';
         return;
     }
     int n=N/2;
-    drawRevMatrix(n,xStart,yStart);
-    drawRevMatrix(n,n+xStart,yStart);
-    drawRevMatrix(n,xStart,n+yStart);
-    drawMatrix(n,n+xStart,n+yStart);
+    h_reverse(n,xStart,yStart);
+    h_reverse(n,n+xStart,yStart);
+    h_reverse(n,xStart,n+yStart);
+    H(n,n+xStart,n+yStart);
 }
 int main(){
     int n;cin>>n;
-    drawMatrix(pow(2,n),0,0);
+    H(pow(2,n),0,0);
     for(int i=0;i<pow(2,n);i++){
         for(int j=0;j<pow(2,n);j++){
-            cout<<hadamardMatrix[i][j];
+            cout<<screen[i][j];
         }cout<<endl;
     }
 }
