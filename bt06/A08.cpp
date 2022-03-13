@@ -1,11 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 int n;
+
 bool a[100005];
 void print(){
     for(int i=1;i<=n;i++){
         if(a[i]){
-            cout<<a[i]
+            cout<<i;
         }
         
     }
