@@ -1,5 +1,5 @@
 //1.Có
-//2. với bài toán quá phúc tạp với vòng lặp
+//2. Không
 //3. tùy thuộc từng bài toán lựa chọn dùng đệ quy hoặc vòng lặp
 //4. cần đề phòng lỗi runtime hoặc tràn bộ nhớ + basecase khi viêt hàm đệ quy
 //5 output=6 4 2 2 1 1 4 3 1 1 3 6 

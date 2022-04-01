@@ -30,4 +30,20 @@ int main()
 
 // *p2 = 'b';
 // doi kieu
+// int* p = new int;
+
+// int* p2 = p;
+
+// *p = 10;
+
+// delete p;
+
+// cout << *p2;
+// giai phong qua som
+// ptr1 = new int;
+
+// ptr2 = new int;
+
+// ptr1 = ptr2;
+// that thoat bo nho
 }
