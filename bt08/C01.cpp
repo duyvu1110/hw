@@ -71,6 +71,22 @@ void trim_right(char a[]){
       cout<<*cp;
    }
 }
+bool is_palindrome(char a[]){
+    char *p=new char;
+    int i=0;
+    for (char *cp = a; (*cp) != '\0'; cp++) {
+        *(p+i)=*cp;
+   }
+   reverse(a);
+   for (char *cp = a; (*cp) != '\0'; cp++) {
+       if(*cp==*(p+i)){
+           i++;
+       }else{
+           return false;
+       }
+   }
+   return true;
+}
 int main()
 {
     char foo[]="chiu day cha biet noi gi";
